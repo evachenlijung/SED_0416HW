@@ -1,0 +1,9 @@
+Person Peter Doctor 60 175
+Person Jacky Actor -1 173
+Person Simon Student 75 182
+Person Charlie Lawyer hello 168
+Job Peter
+WeightAverage Simon Peter
+WeightSum Peter Jacky Simon
+HeightAverage Simon Charlie
+Job Charlie
