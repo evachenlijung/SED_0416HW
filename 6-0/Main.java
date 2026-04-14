@@ -5,6 +5,10 @@ import java.math.*;
 public class Main{
     private static List<AbstractPerson> persons = new ArrayList<>();
     public static void main(String[] args){
+        if(args.length < 1){
+            System.out.println("Usage: java Main <input_file>");
+            return;
+        }
         try(BufferedReader reader = new BufferedReader(new FileReader(args[0]))){
             String line;
             StringBuilder sb = new StringBuilder();
@@ -53,7 +57,7 @@ public class Main{
             BufferedWriter writer = new BufferedWriter(new FileWriter(args[0].split("\\.")[0] + ".out"));
             writer.write(outputString);
             writer.close();
-            System.out.println(outputString);
+            System.out.print(outputString);
             reader.close();
         }catch(IOException e){
             System.out.println("Error reading file.");
