@@ -9,7 +9,8 @@ public class Main{
             System.out.println("Usage: java Main <input_file>");
             return;
         }
-        try(BufferedReader reader = new BufferedReader(new FileReader(args[0]))){
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader(args[0]));
             String line;
             StringBuilder sb = new StringBuilder();
             AbstractPerson p;
@@ -28,7 +29,7 @@ public class Main{
                     for(int i=1; i<parts.length; i++){
                         sum += getPersonByName(parts[i]).getWeight();
                     }
-                    sb.append(Math.round(sum/(parts.length-1)));
+                    sb.append(Math.round((double)sum/(parts.length-1)));
                     sb.append("\n"); 
                 }else if(parts[0].equals("WeightSum")){
                     int sum = 0;
